@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta
+  name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+
+  <title>Filterable Gallery Lightbox!</title>
+</head>
+<body>
+
+  <div class="container py-3">
+    <div class="gallery" style="display:none;">
+
+      <img data-gallery-tag="Perempuan" class="gallery-item" src="assets/img/women.jpeg">
+      <img data-gallery-tag="Laki-laki" class="gallery-item" src="assets/img/women.jpeg">
+      <div class="gallery-item h-100">
+        <div class="bg-danger d-flex flex-column text-warning justify-content-center align-items-center h-100 w-100 p-3">
+          <p class="lead m-0">I have no tag!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/style.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.gallery').mauGallery({
+        columns: {
+          xs: 1,
+          sm: 2,
+          md: 3,
+          lg: 4,
+          xl: 6
+        },
+        lightBox: true,
+        lightboxId: 'myAwesomeLightbox',
+        showTags: true,
+        tagsPosition: 'top'
+      });
+    });
+  </script>
+
+</body>
+</html>
